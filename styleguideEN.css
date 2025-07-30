@@ -1,0 +1,95 @@
+:root {
+    --themes-background-background-white: var(--primitives-colors-base-white);
+    --themes-text-text-default: var(--primitives-colors-base-black);
+    --themes-text-text-error: var(--primitives-colors-red-700);
+    --themes-form-field-border-error: var(--themes-border-border-error);
+    --themes-form-field-text-label: var(--themes-text-text-default-duplicate);
+    --themes-form-field-text-placeholder: var(--themes-text-text-secondary-paragraph);
+    --themes-text-text-error-duplicate: var(--primitives-colors-red-700);
+    --themes-text-text-oncolor-primary: var(--primitives-colors-base-white);
+    --themes-border-border-error: var(--primitives-colors-red-700);
+    --themes-text-text-default-duplicate: var(--primitives-colors-base-black);
+    --themes-text-text-secondary-paragraph: var(--primitives-colors-neutral-500);
+    --themes-background-background-SA-flag: var(--primitives-colors-green-900);
+    --themes-background-background-menu: var(--primitives-colors-base-white);
+    --themes-form-field-background-default: var(--themes-background-background-card);
+    --themes-background-background-card: var(--primitives-colors-base-white);
+    --themes-form-field-border-default: var(--primitives-colors-neutral-400);
+    --primitives-colors-base-white: rgba(255, 255, 255, 1);
+    --primitives-colors-base-black: rgba(22, 22, 22, 1);
+    --primitives-colors-red-700: rgba(180, 35, 24, 1);
+    --primitives-colors-neutral-950: rgba(13, 18, 28, 1);
+    --primitives-colors-neutral-500: rgba(108, 115, 127, 1);
+    --primitives-spacing-1-4px: 4px;
+    --primitives-spacing-2-8px: 8px;
+    --primitives-colors-red-400: rgba(249, 112, 102, 1);
+    --primitives-colors-green-900: rgba(7, 77, 49, 1);
+    --primitives-spacing-4-16px: 16px;
+    --primitives-colors-neutral-200: rgba(229, 231, 235, 1);
+    --primitives-spacing-0-0px: 0px;
+    --primitives-spacing-6-24px: 24px;
+    --primitives-colors-neutral-800: rgba(31, 42, 55, 1);
+    --primitives-colors-primary-SA-flag-600-primary: rgba(27, 131, 84, 1);
+    --primitives-radius-radius-4: 4px;
+    --primitives-colors-neutral-400: rgba(157, 164, 174, 1);
+    --primitives-spacing-8-32px-duplicate: 32px;
+    --primitives-colors-neutral-300: rgba(210, 214, 219, 1);
+    --primitives-spacing-8-32px: 32px;
+    --spacing-spacing-4xl: var(--primitives-spacing-8-32px);
+    --spacing-form-label-gap: var(--primitives-spacing-1-4px);
+    --spacing-form-icon-enteredtext: var(--primitives-spacing-2-8px);
+    --spacing-global-spacing-xl: var(--primitives-spacing-4-16px);
+    --spacing-form-icon-helpertext: var(--primitives-spacing-2-8px);
+    --spacing-button-buttons-lg-gap: var(--primitives-spacing-1-4px);
+    --spacing-form-input-container-padding-left: var(--primitives-spacing-2-8px);
+    --spacing-form-input-container-padding-right: var(--primitives-spacing-4-16px);
+    --spacing-global-spacing-none: var(--primitives-spacing-0-0px);
+    --spacing-global-spacing-xs: var(--primitives-spacing-1-4px);
+    --spacing-button-buttons-lg-padding: var(--primitives-spacing-4-16px);
+    --spacing-global-spacing-3xl: var(--primitives-spacing-6-24px);
+    --spacing-form-input-gap: var(--primitives-spacing-0-0px);
+    --spacing-form-input-padding: var(--primitives-spacing-0-0px);
+    --spacing-form-field-label-gap: var(--primitives-spacing-2-8px);
+    --spacing-global-spacing-4xl: var(--primitives-spacing-8-32px-duplicate);
+    --radius-radius-radius-sm: var(--primitives-radius-radius-4);
+}
+
+/*
+
+To enable a theme in your HTML, simply add one of the following data attributes to an HTML element, like so:
+
+<body data-themes-mode="light">
+    <!-- the rest of your content -->
+</body>
+
+You can apply the theme on any DOM node, not just the `body`
+
+*/
+
+[data-themes-mode="light"] {
+    --themes-background-background-white: var(--primitives-colors-base-white);
+    --themes-text-text-default: var(--primitives-colors-base-black);
+    --themes-text-text-error: var(--primitives-colors-red-700);
+    --themes-text-text-error-duplicate: var(--primitives-colors-red-700);
+    --themes-text-text-default-duplicate: var(--primitives-colors-base-black);
+    --themes-text-text-secondary-paragraph: var(--primitives-colors-neutral-500);
+    --themes-background-background-SA-flag: var(--primitives-colors-green-900);
+    --themes-background-background-menu: var(--primitives-colors-base-white);
+    --themes-form-field-background-default: var(--themes-background-background-card);
+    --themes-background-background-card: var(--primitives-colors-base-white);
+    --themes-form-field-border-default: var(--primitives-colors-neutral-400);
+}
+
+[data-themes-mode="dark"] {
+    --themes-background-background-white: var(--primitives-colors-neutral-950);
+    --themes-text-text-default: var(--primitives-colors-base-white);
+    --themes-text-text-error: var(--primitives-colors-red-400);
+    --themes-text-text-error-duplicate: var(--primitives-colors-red-400);
+    --themes-text-text-default-duplicate: var(--primitives-colors-base-white);
+    --themes-text-text-secondary-paragraph: var(--primitives-colors-neutral-200);
+    --themes-background-background-SA-flag: var(--primitives-colors-primary-SA-flag-600-primary);
+    --themes-background-background-menu: var(--primitives-colors-neutral-800);
+    --themes-form-field-background-default: var(--primitives-colors-neutral-800);
+    --themes-background-background-card: var(--primitives-colors-neutral-800);
+    --themes-form-field-border-default: var(--primitives-colors-neutral-500);
+}

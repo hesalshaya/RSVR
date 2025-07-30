@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="styleguideEN.css" />
+    <link rel="stylesheet" href="styleEN.css" />
+</head>
+
+<body>
+    <div class="form-page-EN">
+        <div class="nav-header">
+            <img class="leading-icon" src="AR.png" id="languageIcon" />
+            <div class=" divider">
+            </div>
+        </div>
+        <div class="form-section">
+            <div class="section">
+                <div class="form">
+                    <div class="content">
+                        <div class="div">
+                            <div class="text-wrapper">Regulatory Scientific Verification Report</div>
+                            <p class="p">
+                                This tool allows for the verification of regulatory information related to the product
+                                or active
+                                ingredient, such as its presence in databases, the availability of sources, or the
+                                existence of
+                                similar products. It also supports the verification of certain regulatory
+                                classifications, such as
+                                being listed in restricted lists. The tool is designed to provide preliminary guidelines
+                                to help you
+                                expedite the verification process.
+                            </p>
+                        </div>
+                        <div class="text-wrapper-2">*Required information</div>
+                    </div>
+                    <div class="input-fields">
+                        <div class="div-2">
+                            <div class="text-input">
+                                <div class="label">
+                                    <div class="label-2">
+                                        <div class="required-asterisk">*</div>
+                                        <p class="text">product name or Active ingredient name</p>
+                                    </div>
+                                </div>
+                                <input type="text" class="input-field" id="product" placeholder=" Acyclovir "
+                                    required />
+                            </div>
+                        </div>
+                        <div class="div-2">
+                            <div class="text-input">
+                                <div class="label">
+                                    <div class="label-2">
+                                        <div class="required-asterisk">*</div>
+                                        <div class="text">Contact email</div>
+                                    </div>
+                                </div>
+                                <input type="text" class="input-field-2" id="email" placeholder=" example@sfda.gov.sa "
+                                    required />
+                                <small id="emailHelp" class="error-message">
+                                    <span class="icon">❓</span> example@sfda.gov.sa
+                                </small>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="div-2">
+                        <button type="submit" class="button" id="submitButton">
+
+
+                            <div class="div-wrapper">
+                                <div class="text-2">Submit</div>
+                            </div>
+                        </button>
+
+                        <button type="button" class="button" id="downloadExcelBtn" style="display: none;">
+                            <div class="div-wrapper">
+                                <div class="text-2">Download Excel</div>
+                            </div>
+                        </button>
+                        <!-- مؤشر تحميل -->
+                        <div id="loadingIndicator"
+                            style="display:none; margin-top: 10px; color: #1b8354; font-weight: bold;">
+                            ⏳ Processing, please wait...
+                        </div>
+                        <!-- No Result Message -->
+                        <div class="no-result" id="noResult">
+                            <span>NO RESULTS FOUND IN THE DATABASES</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <p id="formMessage"></p>
+    <div id="resultContainer" class="resultContainer">
+
+    </div>
+    <div class="footer"></div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
