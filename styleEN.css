@@ -1,10 +1,19 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+.body{
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 16px;
+  color: #222;
+}
+
 .form-page-EN {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    background-color: var(--themes-background-background-white);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--themes-background-background-white);
 }
 
 .form-page-EN .nav-header {
@@ -33,10 +42,8 @@
 
 .form-page-EN .leading-icon {
     width: 64px;
-    /* Try 48px, or even 64px */
     height: 64px;
     object-fit: contain;
-    /* ensures image fits inside without being stretched */
     display: block;
 }
 
@@ -55,7 +62,7 @@
     align-items: center;
     justify-content: center;
     gap: var(--spacing-global-spacing-4xl);
-    padding: 40px 80px 40px 80px;
+    padding: 40px 80px 60px 80px;
     position: relative;
     align-self: stretch;
     width: 100%;
@@ -138,7 +145,7 @@
 .form-page-EN .input-fields {
     flex-direction: column;
     align-items: flex-start;
-    gap: var(--spacing-global-spacing-3xl);
+    gap: 24px; /* tighter spacing between fields */
     flex: 0 0 auto;
     display: flex;
     position: relative;
@@ -163,7 +170,11 @@
     gap: var(--spacing-form-field-label-gap);
     position: relative;
     flex: 1;
+    font-family: "IBM Plex Sans";
     flex-grow: 1;
+    font-size: 15px;
+    margin-bottom: 6px;
+    color: #333;
 }
 
 .form-page-EN .label {
@@ -181,6 +192,9 @@
     gap: var(--spacing-form-label-gap);
     position: relative;
     flex: 0 0 auto;
+    font-size: 15px;
+    margin-bottom: 6px;
+    color: #333;
 }
 
 .form-page-EN .required-asterisk {
@@ -212,16 +226,22 @@
 .form-page-EN .input-field {
     height: 40px;
     align-items: center;
-    background-color: var(--themes-form-field-background-default);
+    /*background-color: var(--themes-form-field-background-default);*/
     border-radius: var(--radius-radius-radius-sm);
     overflow: hidden;
-    border: 1px solid;
+    /*border: 1px solid;*/
     border-color: var(--themes-form-field-border-default);
     display: flex;
     position: relative;
     align-self: stretch;
     width: 100%;
     gap: var(--spacing-form-input-gap);
+    background-color: #fff; /* white for clean look */
+    border: 1.5px solid #ccc;
+    padding: 0 12px;
+    font-size: 15px;
+    transition: border-color 0.3s;
+  
 }
 
 .form-page-EN .icon-text-stack {
@@ -263,14 +283,23 @@
     position: relative;
     align-self: stretch;
     width: 100%;
-    background-color: var(--themes-form-field-background-default);
+    /*background-color: var(--themes-form-field-background-default);*/
     border-radius: var(--radius-radius-radius-sm);
     overflow: hidden;
-    border: 1px solid;
+    /*border: 1px solid;*/
     border-color: var(--themes-form-field-border-default);
     gap: var(--spacing-form-input-gap);
+    background-color: #fff; /* white for clean look */
+    border: 1.5px solid #ccc;
+    padding: 0 12px;
+    font-size: 15px;
+    transition: border-color 0.3s;
 }
-
+.input-field:focus,
+.input-field-2:focus {
+  border-color: #1b8354;
+  outline: none;
+}
 .form-page-EN .helper-text {
     display: inline-flex;
     align-items: center;
@@ -304,34 +333,33 @@
 
 
 .button {
-    all: unset;
-    box-sizing: border-box;
-    display: inline-flex;
-    max-height: 40px;
-    height: 40px;
-    align-items: center;
-    justify-content: center;
-    gap: var(--spacing-button-buttons-lg-gap);
-    padding: var(--spacing-global-spacing-none) var(--spacing-button-buttons-lg-padding);
-    background-color: #1b8354;
-    /* نفس لون زر Submit */
-    border-radius: var(--radius-radius-radius-sm);
-    cursor: pointer;
-    transition: 0.3s;
+  all: unset;
+  box-sizing: border-box;
+  display: inline-flex;
+  max-height: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-button-buttons-lg-gap);
+  padding: var(--spacing-global-spacing-none) var(--spacing-button-buttons-lg-padding);
+  background-color: #1b8354; 
+  border-radius: var(--radius-radius-radius-sm);
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 16px;
 }
 
 .button:hover {
-    opacity: 0.9;
+  opacity: 0.9;
 }
 
 .button .text-2 {
-    font-family: "IBM Plex Sans", sans-serif;
-    color: white;
-    /* الأبيض كما طلبت */
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 24px;
-    white-space: nowrap;
+  font-family: "IBM Plex Sans", sans-serif;
+  color: white; 
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  white-space: nowrap;
 }
 
 .form-page-EN .div-wrapper {
@@ -343,31 +371,34 @@
 }
 
 
-.footer {
+ .footer {
     display: flex;
     width: 1440px;
     height: 200px;
     align-items: flex-end;
-    justify-content: flex-start;
+    justify-content: flex-end;
     padding: 0px var(--spacing-spacing-4xl) 0px var(--spacing-spacing-4xl);
-    position: relative;
+    position:relative;
     background-color: var(--themes-background-background-SA-flag);
 }
 
 
 .resultContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    margin-top: -1.00px;
-    width: 100%;
-    height: 528px;
-    background: var(--themes-background-background-white);
-    border-radius: 12px;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
-    padding: 40px 80px 40px 80px;
+  flex: 1; /* ✨ هذا يجعل المساحة تمتد إذا كانت النتائج طويلة */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  padding-left: 40px;
+  padding-right: 40px;
+  background: var(--themes-background-background-white);
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  padding: 40px 80px;
+  box-sizing: border-box;
 }
+
 
 .title {
     position: relative;
@@ -398,107 +429,246 @@
 
 
 .results-title {
-    font-family: "IBM Plex Sans";
-    font-size: 24px;
-    font-weight: bold;
-    color: var(--themes-text-text-default);
-    margin-bottom: 16px;
-}
-
-
-
-table {
-    font-family: "IBM Plex Sans";
-    border-collapse: collapse;
-    background: var(--themes-background-background-white);
-    box-shadow: 0 2px 8px rgba(21, 95, 160, 0.06);
-    border-radius: 8px;
-    gap: var(--spacing-global-spacing-4xl);
-}
-
-th,
-td {
-    padding: 12px 10px;
-    border: 1.5px solid;
-    font-family: "IBM Plex Sans";
-    color: var(--themes-background-background-SA-flag);
-    text-align: left;
-    vertical-align: top;
-    font-size: 1em;
-}
-
-th {
-    background: var(--themes-background-background-SA-flag);
-    color: var(--themes-background-background-white);
-    font-family: "IBM Plex Sans";
-    font-weight: bold;
-    font-size: 1.04em;
-    letter-spacing: 0.2px;
-}
-
-
-tr:nth-child(even) td {
-    background: var(--themes-background-background-white);
-}
-
-
-.table-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: var(--spacing-global-spacing-4xl);
-    padding: 40px 80px 40px 80px;
-    position: relative;
-    align-self: stretch;
-    width: 100%;
-    height: 100%;
-    flex: 0 0 auto;
-}
-
-.results-table {
-    font-family: "IBM Plex Sans";
-    display: block;
-    width: 100%;
-    height: 615px;
-    border-collapse: collapse;
-    overflow: scroll;
+  font-family: "IBM Plex Sans";
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--themes-text-text-default);
+  margin-bottom: 16px;
 }
 
 .no-result {
-    border: 2px dashed red;
-    padding: 10px;
-    margin-top: 50px;
-    margin-left: -107px;
-    background-color: #fff5f5;
-    color: #c0392b;
-    font-weight: bold;
-    text-align: center;
-    display: none;
+  border: 2px dashed red;
+  padding: 10px;
+  margin-top: 50px;
+  margin-left: -107px;
+  background-color: #fff5f5;
+  color: #c0392b;
+  font-weight: bold;
+  text-align: center;
+  display: none;
 }
 
-input {
-    border: 2px solid #ccc;
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 20px;
+  gap: 24px;
+  margin-top: 20px;
+  width: 100%;
+  justify-items: center;
 }
 
-input.error {
-    border: 2px solid #a60000 !important;
+
+.result-card:hover {
+  transform: translateY(-3px);
 }
 
-input.valid {
-    border: 2px solid green !important;
+.card-field {
+  margin-bottom: 8px;
 }
 
-.error-message {
-    color: #a60000;
-    font-size: 0.9em;
-    display: none;
-    align-items: center;
+.card-label {
+  font-weight: bold;
+  color: #444;
+  display: block;
 }
 
-.error-message .icon {
-    margin-right: 5px;
+.card-value {
+  color: #555;
+  display: block;
+  word-break: break-word;
+}
+@media (max-width: 768px) {
+  .cards-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-.error-message.show {
-    display: flex;
+.result-card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 24px 32px; /* ← more generous padding */
+  width: 100%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+  font-family: "IBM Plex Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 200px;
+  justify-content: space-between;
+  gap: 12px;
+
+}
+
+.MainCard{
+    width: 90%;
+}
+.Card_container_main{
+  display: grid;
+  grid-template-columns: repeat( 1fr);
+  padding: 20px;
+  gap: 24px;
+  margin-top: 20px;
+  width: 100%;
+  justify-items: center;   
+}
+
+.data-source-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1b8354;
+  /*margin: 32px 0 12px;*/
+  margin: 48px 0 20px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 4px;
+  width: 100%;
+  text-align: left;
+  font-family: "IBM Plex Sans";
+}
+.show-more-btn {
+  background-color: #1b8354;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  margin-top: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: "IBM Plex Sans";
+}
+.button_container{
+  /*display: grid;*/
+  grid-template-columns: repeat( 1fr);
+  padding: 20px;
+  width: 100%;
+  justify-items: left; 
+  margin-top: 24px;
+  display: flex;
+  gap: 20px;
+
+}
+
+.result-group .cards-container.limited .result-card:nth-child(n+6) {
+  display: none;
+}
+
+.summary-card {
+  background: #f5f5f5;
+  border-left: 5px solid #00a86b;
+  padding: 32px 60px; /* زودنا المسافة الجانبية هنا */
+  margin: 12px 0 32px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  max-width: 90%;       /* يجعل البطاقة لا تمتد لحواف الصفحة */
+  margin-left: auto;    /*  لتوسيطها */
+  margin-right: auto;
+}
+
+.summary-card p {
+  margin: 6px 0;
+}
+.summary-card h3 {
+  margin-bottom: 10px;
+}
+
+.results-title,
+.data-source-title {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.summary-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.summary-line strong {
+  font-weight: 600;
+  color: #000;
+  min-width: 150px; 
+}
+
+.summary-line span {
+  flex: 1;
+  color: #444;
+}
+
+.summary-link {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 14px;
+  margin-top: 6px;
+  display: inline-block;
+}
+
+.summary-link:hover {
+  text-decoration: underline;
+}
+
+.overview span strong {
+  font-weight: 700;
+  color: #1b8354; 
+}
+/* ========== DARK MODE ========== */
+.dark-mode {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+.dark-mode .form-page-EN {
+  background-color: #121212;
+}
+
+.dark-mode .text-wrapper,
+.dark-mode .p,
+.dark-mode .text,
+.dark-mode .label-2,
+.dark-mode .text-wrapper-2 {
+  color: #f0f0f0;
+}
+
+.dark-mode .input-field,
+.dark-mode .input-field-2 {
+  background-color: #1e1e1e;
+  color: #fff;
+  border-color: #333;
+}
+
+.dark-mode .input-field::placeholder,
+.dark-mode .input-field-2::placeholder {
+  color: #aaa;
+}
+
+.dark-mode .button {
+  background-color: #00b56a;
+}
+
+.dark-mode .summary-card {
+  background: #1f1f1f;
+  border-left: 5px solid #00b56a;
+  color: #eee;
+}
+
+.dark-mode .result-card {
+  background-color: #1e1e1e;
+  border-color: #2c2c2c;
+  color: #f5f5f5;
+}
+
+.dark-mode .data-source-title,
+.dark-mode .results-title {
+  color: #00e293;
 }
