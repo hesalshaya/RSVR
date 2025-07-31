@@ -13,7 +13,8 @@
 <body>
     <div class="form-page-EN">
         <div class="nav-header">
-            <img class="leading-icon" src="AR.png" id="languageIcon" />
+            <button id="toggleDarkMode" style="position: fixed; top: 20px; right: 20px; z-index: 999;">🌙</button>
+            <!--<img class="leading-icon" src="AR.png" id="languageIcon" />-->
             <div class=" divider">
             </div>
         </div>
@@ -22,7 +23,7 @@
                 <div class="form">
                     <div class="content">
                         <div class="div">
-                            <div class="text-wrapper">Regulatory Scientific Verification Report</div>
+                            <div class="text-wrapper">Regulatory Scientific Verification Report (RSVR)</div>
                             <p class="p">
                                 This tool allows for the verification of regulatory information related to the product
                                 or active
@@ -46,8 +47,7 @@
                                         <p class="text">product name or Active ingredient name</p>
                                     </div>
                                 </div>
-                                <input type="text" class="input-field" id="product" placeholder=" Acyclovir "
-                                    required />
+                                <input type="text" class="input-field" id="product" required placeholder=" Acyclovir " />
                             </div>
                         </div>
                         <div class="div-2">
@@ -58,56 +58,53 @@
                                         <div class="text">Contact email</div>
                                     </div>
                                 </div>
-                                <input type="text" class="input-field-2" id="email" placeholder=" example@sfda.gov.sa "
-                                    required />
-                                <small id="emailHelp" class="error-message">
-                                    <span class="icon">❓</span> example@sfda.gov.sa
-                                </small>
+                                <input type="text" class="input-field-2" id="email" required placeholder=" example@sfda.gov.sa " />
+                                <small id="emailHelp" style="color: red; display: none;">Please enter a valid email address (e.g. name@example.com)</small>
 
                             </div>
                         </div>
                     </div>
                     <div class="div-2">
-                        <button type="submit" class="button" id="submitButton">
+  <button type="submit" class="button" id="submitButton">
 
+  
+    <div class="div-wrapper">
+      <div class="text-2">Submit</div>
+    </div>
+  </button>
 
-                            <div class="div-wrapper">
-                                <div class="text-2">Submit</div>
-                            </div>
-                        </button>
-
-                        <button type="button" class="button" id="downloadExcelBtn" style="display: none;">
-                            <div class="div-wrapper">
-                                <div class="text-2">Download Excel</div>
-                            </div>
-                        </button>
-                        <!-- مؤشر تحميل -->
-                        <div id="loadingIndicator"
-                            style="display:none; margin-top: 10px; color: #1b8354; font-weight: bold;">
-                            ⏳ Processing, please wait...
-                        </div>
-                        <!-- No Result Message -->
-                        <div class="no-result" id="noResult">
-                            <span>NO RESULTS FOUND IN THE DATABASES</span>
-                        </div>
-                    </div>
+  <button type="button" class="button" id="downloadExcelBtn" style="display: none;">
+    <div class="div-wrapper">
+      <div class="text-2">Download Excel</div>
+    </div>
+  </button>
+  <!-- مؤشر تحميل -->
+<div id="loadingIndicator" style="display:none; margin-top: 10px; color: #1b8354; font-weight: bold ; font-family: IBM Plex Sans;">
+  ⏳ Processing, please wait...
+</div>
+  <!-- No Result Message -->
+  <div class="no-result" id="noResult" >
+  <span>NO RESULTS FOUND IN THE DATABASES</span>
+</div>
+</div>
 
                 </div>
             </div>
-
+            
         </div>
-
+        
 
     </div>
-
-
+   
+    
     <p id="formMessage"></p>
-    <div id="resultContainer" class="resultContainer">
+    <div id="resultContainer">
+</div>
 
-    </div>
+
     <div class="footer"></div>
 
-    <script src="index.js"></script>
+    <script src="test_hessa.js"></script>
 </body>
 
 </html>
